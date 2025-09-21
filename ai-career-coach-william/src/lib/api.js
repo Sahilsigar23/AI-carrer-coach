@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 
-  (import.meta.env.PROD ? 'https://server-844o85l45-harsh-yadavs-projects-0b2945f8.vercel.app' : 'http://localhost:5000');
+  (import.meta.env.PROD ? import.meta.env.VITE_BACKEND_URL || 'https://your-backend-url.onrender.com' : 'http://localhost:5000');
 
 const api = axios.create({
     baseURL: API_BASE_URL,
